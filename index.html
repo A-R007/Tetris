@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AR's Tetris Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="bodyBg">
+      <h1 style="color: rgb(129, 43, 43)">&#128241; Tetris &#128241;</h1>
+      <canvas id="tetris" width="200" height="400"></canvas>
+      <br />
+      <div>
+        Score :
+        <div id="score">0</div>
+      </div>
+      <script src="./index.js"></script>
+    </div>
+    <div id="mcrx-pinner-root">
+      <div data-reactroot="" id="Pinners">
+        <div
+          class="PinnerButton ImagePinner"
+          style="display: none; top: 0px; left: 0px"
+        >
+          <svg class="Icon MiniLogo" width="8" height="8" viewBox="0 0 8 8">
+            <path
+              fill="#FAFAFA"
+              fill-rule="evenodd"
+              d="M6.938 6.187L4.751 3.999l2.187-2.186v4.374zm-5.125.75L4 4.75l2.187 2.188H1.813zm-.751-5.124l2.187 2.186-2.187 2.188V1.813zM7.672.04c-.2-.082-.427-.036-.578.115L4 3.248.906.155C.754.004.526-.042.328.04.129.123 0 .316 0 .53v6.943c0 .071.015.138.04.2.025.06.061.115.109.164l.001.001.001.001.001.001.008.008v.001l.002.001c.05.049.106.084.165.109.061.025.128.04.199.04H7.474c.07 0 .137-.015.198-.04.063-.026.122-.064.173-.115.05-.05.09-.11.116-.173.025-.061.04-.127.04-.197V.53c0-.215-.13-.408-.328-.49z"
+            ></path>
+          </svg>
+          "Save"
+        </div>
+      </div>
+    </div>
+    <div id="mcrx-drawer-root">
+      <div
+        data-reactroot=""
+        id="mcrx-drawer-shadow-container"
+        class="resolved"
+      ></div>
+    </div>
+    <audio id="myAudio" controls>
+      <source src="tt.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.</audio
+    ><br />
+
+    <b
+      ><button onclick="enableLoop()" type="button" class="btn">
+        Enable loop
+      </button>
+      <button onclick="disableLoop()" type="button" class="btn">
+        Disable loop
+      </button></b
+    >
+
+    <script>
+      var x = document.getElementById("myAudio");
+
+      function enableLoop() {
+        x.loop = true;
+        x.load();
+      }
+
+      function disableLoop() {
+        x.loop = false;
+        x.load();
+      }
+    </script>
+  </body>
+</html>
